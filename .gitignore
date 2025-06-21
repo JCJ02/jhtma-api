@@ -1,0 +1,5 @@
+.vercel
+.env
+alembic/versions/
+__pycache__
+.vscode
