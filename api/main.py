@@ -6,8 +6,8 @@ from api.routes import router as api_router
 
 # INITIALIZE FastAPI APP
 app = FastAPI(
-    title = "Job Hunting Tracker App API Documentation",
-    description = "The Job Hunting Tracker App empowers you to keep every application organized and accounted for. From the moment you hit 'submit' to that final decision, you'll have a clear overview. Log company names, roles, and application dates, then simply update the status as you move through the hiring process - whether it's pending a response, an interview, an acceptance, or a rejection. Simplify your job hunt and stay on top of your game.",
+    title = "Job Hunting Tracker Mobile App API Documentation",
+    description = "The Job Hunting Tracker Mobile App empowers you to keep every application organized and accounted for. From the moment you hit 'submit' to that final decision, you'll have a clear overview. Log company names, roles, and application dates, then simply update the status as you move through the hiring process - whether it's pending a response, an interview, an acceptance, or a rejection. Simplify your job hunt and stay on top of your game.",
     version = "1.0.0",
 )
 
@@ -28,7 +28,7 @@ app.include_router(api_router)
 async def root():   
     return AppResponse.send_successful(
         data = None,
-        message = "Hello World!",
+        message = "Job Hunting Tracker Mobile Application!",
         code = 200
     )
 
