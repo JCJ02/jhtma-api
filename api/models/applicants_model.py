@@ -28,7 +28,7 @@ class JobApplications(Base):
     job_setup = Column(String, index=True) # Options = Remote Work, Onsite, Hybrid
     location = Column(String, index=True)
     date_applied = Column(DateTime(timezone=True), server_default=func.now())
-    application_status = Column(String, server_default="Submitted - Pending Response", index=True) # Options = Accepted, Rejected, Submitted - Pending Response, Initial Interviewed, Technical Interviewed, Final Interviewed
+    application_status = Column(String, server_default="Submitted - Pending Response", index=True) # Options = Submitted - Pending Response, Initial Interviewed, Technical Interview, Final Interview, Job Offered, Accepted, Rejected
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
     deleted_at = Column(DateTime(timezone=True), nullable=True)
